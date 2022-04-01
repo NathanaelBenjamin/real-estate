@@ -541,6 +541,7 @@ svg:hover{
 
    .jumbotron p{
         font-size: 0.9rem;
+        width: 95%;
     }
 
     .features{
@@ -641,13 +642,9 @@ svg:hover{
 @media (max-width: 360px){
 
     .dark-background{
-        padding: 2.5rem 1rem;
+        padding: 2.5rem 1rem 3.2rem 1rem;
     }
-
-    .jumbotron p{
-        width: 100%;
-    }
-
+    
     .feature-img{
         width: 85%;
     }
