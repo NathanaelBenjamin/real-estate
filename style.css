@@ -665,6 +665,10 @@ svg:hover{
         right: 0.699rem;
     }
 
+    .previous{
+        left: 0.699rem;
+    }
+
     .previous svg , .next svg{
         width: 1.6rem;
         height: 1.6rem;
