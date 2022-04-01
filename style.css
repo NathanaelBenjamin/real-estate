@@ -1,0 +1,676 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=DM+Serif+Text&family=Inter:wght@100&family=Lora&family=McLaren&family=Nunito:wght@200;300;400;500;600;700;800&family=Oswald:wght@300&family=Prata&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@200&family=Work+Sans:wght@100;200;300&display=swap'); */
+
+.container{
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+:root{
+    --primary-font: 'Nunito', sans-serif;
+    --primary-bg-color: #f5f5f5;
+    --light-font-color: #fff;
+    --dark-font-color: #000;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header a{
+text-decoration: none;
+color: var(--light-font-color);
+}
+
+.logo a{
+    font-weight: 850;
+}
+
+.logo-part{
+    color: #c8c6dd;
+}
+
+.navbar, .nav-links{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.navbar div a:hover{
+    background: none;
+    position: relative;
+    color: #dbd6d6;
+}
+
+#home:hover::before{
+    position: absolute;
+    background: var(--light-font-color);
+    content: " ";
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 2px;
+    top: 20px;
+    animation-name: home;
+}
+
+#blog:hover::before{
+    position: absolute;
+    background: var(--light-font-color);
+    content: " ";
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 2px;
+    top: 20px;
+    animation-name: blog;
+}
+
+#about:hover::before{
+    position: absolute;
+    background: var(--light-font-color);
+    content: " ";
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 2px;
+    top: 20px;
+    animation-name: about;
+}
+
+/* NAVBAR BUTTON */
+
+.menu-btn{
+    display: none;
+    cursor: pointer;
+}
+
+.horizontal-line{
+    width: 20px;
+    margin-top: -3px;
+    transition: transform ease-in 0.4s;
+}
+
+.first-line-transform{
+    transform: rotate(-44deg);
+}
+
+.second-line-transform{
+    margin-top: -0.69rem;
+    transform: rotate(45deg);
+}
+
+.third-line-transform{
+    display: none;
+}
+
+/* NAVBAR LINKS HOVER ANIMATION EFFECT */
+@keyframes home{
+    0%{
+        height: 2px;
+        width: 0px;
+    }
+    100%{
+        height: 2px;
+        width: 48px;
+    }
+}
+
+@keyframes blog{
+    0%{
+        height: 2px;
+        width: 0px;
+    }
+    100%{
+        height: 2px;
+        width: 38px;
+    }
+}
+
+@keyframes about{
+    0%{
+        height: 2px;
+        width: 0px;
+    }
+    100%{
+        height: 2px;
+        width: 72px;
+    }
+}
+
+.dark-background{
+    height: 100%;
+    /* width: 100%; */
+    background-image: url("./jumbotron\ background.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 2.5rem 3rem 4rem 3rem;
+    background-color: rgba(0, 0, 0, 0.82);
+    background-blend-mode: darken;
+    color: var(--light-font-color);
+    text-align: center;
+}
+
+.jumbotron h2{
+    font-weight: 300;
+    font-size: 2.8rem;
+    width: 88%;
+    margin: 6.5rem auto 0 auto;
+}
+
+.jumbotron p{
+    width: 80%;
+    margin: 2rem auto 0 auto;
+    font-weight: 300;
+    color: #afafaf;
+}
+
+.features{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: #fdfafa;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--dark-font-color);
+    padding: 7rem 5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feature-img{
+    width: 88%;
+    height: 18rem;
+}
+
+.feature-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.features p{
+    width: 75%;
+    text-align: justify;
+    font-weight: 100;
+    font-size: 1rem;
+    margin-top: -2.9%;
+}
+
+.features h3{
+    font-weight: 170;
+    font-size: 1.7rem;
+}
+
+.btn{
+    border: none;
+    background: #d2dae2;
+    padding: 0.75rem;
+    max-width: 8.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.forward svg{
+    width: 25px;
+    height: 20px;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    transition: transform ease-in 0.2s;
+}
+
+.about-project{
+    padding: 2.5rem 2rem 6.01rem 2rem;
+    position: relative;
+}
+
+.about-project h2{
+    font-weight: 100;
+    font-size: 2.6rem;
+}
+
+.houses-slide{
+    width: 100%;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+.houses-slide figure img{
+    width: 95%;
+    height: 35rem;
+    animation: zoom 12s linear infinite ;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.15);
+        overflow: hidden;
+    }
+    
+    15%{
+        transform: scale(1);
+        overflow: hidden;
+    }
+
+  85%{
+        transform: scale(1);
+        overflow: hidden;
+    }
+
+    100%{
+        transform: scale(1.15);
+        overflow: hidden;
+    }
+}
+
+.slide-btn{
+    position: absolute;
+    z-index: 100;
+    background: red;
+    width: 0.001rem;
+    padding: 1.5rem 3rem;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    top: 48%;
+    cursor: pointer;
+}
+
+.next{
+    right: 1.58rem;
+}
+
+svg{
+    stroke: #636e72;
+}
+
+.next svg{
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0.6px solid gray;
+    border-radius: 50%;
+    font-weight: 150;
+}
+
+.previous{
+    left: 0.4rem;
+}
+
+.previous svg{
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0.3px solid gray;
+    border-radius: 50%;
+    font-weight: 150;
+}
+
+.testimonies{
+    background-color:  #fdfafa;
+    padding: 3rem 4.5rem;
+}
+
+.testimonies h2{
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin: 0 auto 4.9rem auto;
+    text-align: center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.testimonial--card{
+    width: 73%;
+    height: 320px;
+    position: relative;
+    background-color: #f3f4f5;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.testimonial--card p{
+    text-align: justify;
+    font-weight: 300;
+    opacity: 0.85;
+    font-size: 1.14rem;
+}
+
+#stretched{
+    grid-column: 1/span 2;
+}
+
+.quotation--mark{
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+}
+
+.quotation--mark svg{
+    width: 30px;
+    height: 30px;
+    fill: #30336b;
+}
+
+.waved-div{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 0.3rem; 
+}
+
+.waved-div img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.social-media{
+    margin-top: 0.5rem;
+}
+
+.social-media svg{
+    width: 25px;
+    height: 25px;
+    fill: #3498db;
+}
+
+footer{
+    background: #1e272e;
+    display: grid;
+    padding: 2rem 2.2rem;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--light-font-color);
+    place-items: center;
+}
+
+footer a{
+    color: var(--light-font-color);
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 1.85rem;
+}
+
+footer h3{
+    font-weight: 300;
+}
+
+footer svg{
+    color: #fff;
+}
+
+ .copyright{
+    grid-column: 1/span 2;
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-weight: 200;
+}
+
+.copy{
+    grid-column: 1/span 2;   
+    place-self: center; 
+}
+
+.terms{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-top: 1.8rem;
+}
+
+.terms a:hover{
+    transition: border-bottom ease-in 0.3s;
+    border-bottom: 1.2px solid #fff;
+}
+
+.icons{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.icons svg{
+    width: 30px;
+    height: 30px;
+}
+
+svg:hover{
+    transition: transform ease 0.25s;
+    transform: scale(1.09);
+}
+
+/* MEDIA QUERIES. */
+
+/* @media(max-width: 1029px) and (min-width: 690px){
+    .first-card{
+        order: 4;
+    }
+
+    .second-card{
+        order: 2;
+    }
+
+    .third-card{
+        order: 3;
+    }
+
+    .fourth-card{
+        order: 5;
+    }
+
+    .fifth-card{
+        order: 1;
+    }
+} */
+
+@media (max-width: 680px){
+    .menu-btn{
+        display: inline-block;
+        position: absolute;
+        top: 2.92rem;
+        right: 1.7rem;
+        z-index: 100;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 30;
+        padding: 0 2rem;
+        background-color: rgba(0, 0, 0, .85);
+        color: #f3f4f5;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(400%);
+        transition: transform ease-in 0.5s;
+    }
+
+    .open{
+        transform: translateX(0%);
+    }
+
+    .nav-links{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0.7fr;
+        grid-template-rows: repeat(3, 20px);
+        gap: 1rem;
+        justify-content: left;
+        margin-top: 5rem;
+    }
+
+     .testimonies h2, .features h3, .about-project h2{
+        font-weight: 350;
+        font-size: 1.8rem;
+    }
+
+    .jumbotron h2{
+        font-size: 1.3rem;
+        width: 103%;
+    }
+
+   .jumbotron p{
+        font-size: 0.9rem;
+    }
+
+    .features{
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0 3rem 2.6rem;
+    }
+
+    .one_feature{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .one_feature h3{
+        font-size: 1.3rem;
+    }
+
+    .one_feature p{
+        font-size: 0.9rem;
+        line-height: 1.15rem;
+    }
+
+    .about-project{
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    .houses-slide figure img{
+        width: 90%;
+        max-height: 40vh;
+    }
+
+    .testimonies{
+        padding: 6.4%;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .cards{
+        justify-content: center;
+        align-items: center; 
+        gap: 7.6rem;
+    }
+
+    .testimonial--card{
+        width: 65%;
+        height: 100%;
+        padding: 6%;
+    }
+
+    #stretched{
+        grid-column: 1/span 1;
+    }
+
+    .icons svg{
+    width: 23px;
+    height: 23px;
+}
+}
+
+/* To settle the footer area. */
+@media(max-width: 600px) and (min-width: 425px){
+
+    footer{
+        padding: 2rem 0.6rem;
+    }
+
+    .terms{
+        font-size: 0.8rem;
+        text-align: left;
+    }
+
+    .social-media{
+        font-size: 0.8rem;
+    }
+
+    .copyright{
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+}
+
+@media (max-width: 425px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        font-weight: 200;
+        gap: 1.2rem; 
+    }
+
+    footer h3, .copyright, .terms{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px){
+
+    .dark-background{
+        padding: 2.5rem 1rem;
+    }
+
+    .jumbotron p{
+        width: 100%;
+    }
+
+    .feature-img{
+        width: 85%;
+    }
+
+    .about-project{
+    padding: 0;
+    }
+
+    .houses-slide figure img{
+        width: 100%;
+        max-height: 38vh;
+    }
+
+    .next{
+        right: 0.699rem;
+    }
+
+    .previous svg , .next svg{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .testimonial--card p{
+        font-size: 0.95rem;
+    }
+}
