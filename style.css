@@ -154,7 +154,7 @@ color: var(--light-font-color);
     background-image: url("./jumbotron\ background.jpg");
     background-position: center;
     background-size: cover;
-    padding: 2.5rem 3rem 5.4rem 3rem;
+    padding: 2.5rem 3rem 6rem 3rem;
     background-color: rgba(0, 0, 0, 0.82);
     background-blend-mode: darken;
     color: var(--light-font-color);
