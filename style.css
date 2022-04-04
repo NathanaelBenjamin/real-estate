@@ -155,7 +155,7 @@ color: var(--light-font-color);
     background-position: center;
     background-size: cover;
     padding: 3rem 3rem 6.8rem 3rem;
-    background-color: rgba(0, 0, 0, 0.82);
+    background-color: rgba(0, 0, 0, 0.65);
     background-blend-mode: darken;
     color: var(--light-font-color);
     text-align: center;
@@ -663,7 +663,7 @@ svg:hover{
     }
 
     .previous{
-        left: -0.3rem;
+        left: -0.24rem;
     }
 
     .previous svg , .next svg{
